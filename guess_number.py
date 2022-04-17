@@ -1,18 +1,18 @@
 import random
 
-def guess(x):
-  random_number = random.randint(1, x)
-  guess = 0
-  while guess != random_number:
-    guess = int(input(f"Guess a number between 1 and {x}: "))
-    if guess > random_number:
-      print("Sorry, your guess was too high. Try again.")
-    elif guess < random_number:
-      print("Sorry, your guess was too low. Try again.")
-      
-  print (f"Yay, congrats, you guessed correctly. The number was {random_number}!!")
-  
+
+def game(stop):
+  start = 0
+  number_guessed = 0
+  guess = random.randint(start, stop)
+  while number_guessed != guess:
+    number_guessed = int(input(f'Guess a number between 1 and {stop}: '))
+    if number_guessed < guess:
+      print(f'Number was too low, please try a higher value')
+    elif number_guessed > guess:
+      print(f'Number was too high, please try a higher value')
+
+  print(f"Guessed number was correct, it is {guess}!!")
 
 
-
-guess(10)
+game(20)
