@@ -14,3 +14,8 @@ class Animal:
 
 
 ###https://github.com/heykarimoff/solid.python/blob/master/1.srp.py
+
+"""
+A class should have only one job.  If a class has more than one responsibility,
+it becomes coupled.  A change to one responsibility results to modification of
+the other responsibility."""
